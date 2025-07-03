@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import Image from 'next/image'
 
 const banners = [
   {
@@ -29,7 +30,7 @@ export default function BannerSlider() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % banners.length)
-    }, 3000) // Change slide every 5 seconds
+    }, 3000) // Change slide every 3 seconds
     return () => clearInterval(timer)
   }, [])
 
@@ -44,10 +45,10 @@ export default function BannerSlider() {
           transition={{ duration: 0.7 }}
           className="absolute inset-0 w-full h-full"
         >
-          <img
+          <Image
             src={banners[index].image}
             alt={banners[index].title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover" width={1200} height={400}
           />
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm p-8 md:p-16 flex flex-col justify-center text-white">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">{banners[index].title}</h2>
