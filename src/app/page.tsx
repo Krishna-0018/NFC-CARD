@@ -50,7 +50,7 @@ export default function Home() {
   <Button variant="ghost">Home</Button>
 
   {/* Collections Dropdown */}
-  <DropdownMenu>
+  {/* <DropdownMenu>
     <DropdownMenuTrigger asChild>
       <Button variant="ghost">Collections</Button>
     </DropdownMenuTrigger>
@@ -61,8 +61,27 @@ export default function Home() {
       <DropdownMenuItem>NFC Car Tag</DropdownMenuItem>
       <DropdownMenuItem>NFC Social Media Tag</DropdownMenuItem>
     </DropdownMenuContent>
-  </DropdownMenu>
-
+  </DropdownMenu> */}
+{/* Products Dropdown */}
+<DropdownMenu>
+  <DropdownMenuTrigger asChild>
+    <Button variant="ghost">Products</Button>
+  </DropdownMenuTrigger>
+  <DropdownMenuContent align="start" className="max-w-xs grid grid-cols-2 gap-2 p-2">
+    <DropdownMenuItem>NFC Tags</DropdownMenuItem>
+    <DropdownMenuItem>NFC Stickers</DropdownMenuItem>
+    <DropdownMenuItem>NFC Cards</DropdownMenuItem>
+    <DropdownMenuItem>NFC Card Reader</DropdownMenuItem>
+    <DropdownMenuItem>NFC Keychains</DropdownMenuItem>
+    <DropdownMenuItem>NFC Bracelets</DropdownMenuItem>
+    <DropdownMenuItem>Digital Business Cards</DropdownMenuItem>
+    <DropdownMenuItem>Smartcard Reader</DropdownMenuItem>
+    <DropdownMenuItem>NFC devices</DropdownMenuItem>
+    <DropdownMenuItem>Chip Scanner</DropdownMenuItem>
+    <DropdownMenuItem>Tap Business Card</DropdownMenuItem>
+    <DropdownMenuItem>Plastic Business Cards</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
   <Button variant="ghost">About Us</Button>
   <Button variant="ghost">Contact</Button>
 </div>
@@ -360,7 +379,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-grow flex flex-col items-center justify-center p-6 space-y-8">
         {/* Welcome Card */}
-        <Card className="max-w-xl w-full">
+        {/* <Card className="max-w-xl w-full">
           <CardHeader>
             <CardTitle>Welcome to NFC Card Maker</CardTitle>
           </CardHeader>
@@ -369,10 +388,10 @@ export default function Home() {
               We offer smart NFC Cards, Tags, Keychains, and more. Fill the form below to create your personalized NFC product.
             </p>
           </CardContent>
-        </Card>
+        </Card> */}
 
         {/* Customer Form */}
-        <Card className="max-w-xl w-full">
+        {/* <Card className="max-w-xl w-full">
           <CardHeader>
             <CardTitle>Enter Your Details</CardTitle>
           </CardHeader>
@@ -408,7 +427,7 @@ export default function Home() {
               </Button>
             </form>
           </CardContent>
-        </Card>
+        </Card> */}
       </main>
 
       {/* Footer */}
