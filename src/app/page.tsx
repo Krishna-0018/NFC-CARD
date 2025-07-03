@@ -424,7 +424,7 @@ export default function Home() {
     <div>
       <h4 className="text-base font-semibold mb-2 text-primary">Quick Links</h4>
       <ul className="space-y-1">
-        <li><a  href="/" className="hover:underline">Home</a ></li>
+        <li><a  href="#" className="hover:underline">Home</a ></li>
         <li><a  href="/collections" className="hover:underline">Collections</a ></li>
         <li><a  href="/about" className="hover:underline">About Us</a ></li>
         <li><a  href="/contact" className="hover:underline">Contact</a ></li>
