@@ -1,5 +1,5 @@
 'use client'
-
+import Image from "next/image"
 import { useTheme } from "next-themes"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -162,8 +162,200 @@ export default function Home() {
 
   </div>
 </section>
+<section className="py-10 px-4 bg-background border-b">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-2xl font-bold text-primary mb-6 text-center">Our NFC Products</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      
+      {/* NFC Card */}
+      <Card className="hover:shadow-lg transition">
+        <CardHeader>
+          <CardTitle>NFC Card</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground">
+            Sleek, credit-card-sized smart cards to share your digital profile with a single tap.
+          </p>
+        </CardContent>
+      </Card>
 
+      {/* NFC Keychain */}
+      <Card className="hover:shadow-lg transition">
+        <CardHeader>
+          <CardTitle>NFC Keychain</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground">
+            Compact, stylish, and always with you. Share info instantly via your keychain.
+          </p>
+        </CardContent>
+      </Card>
 
+      {/* NFC Tag */}
+      <Card className="hover:shadow-lg transition">
+        <CardHeader>
+          <CardTitle>NFC Tag</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground">
+            Stickable NFC tags for branding, smart posters, or business applications.
+          </p>
+        </CardContent>
+      </Card>
+
+      {/* NFC Car Tag */}
+      <Card className="hover:shadow-lg transition">
+        <CardHeader>
+          <CardTitle>NFC Car Tag</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground">
+            Share your business or contact info easily while on the road.
+          </p>
+        </CardContent>
+      </Card>
+
+      {/* NFC Social Media Tag */}
+      <Card className="hover:shadow-lg transition">
+        <CardHeader>
+          <CardTitle>NFC Social Media Tag</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground">
+            Instantly connect others to your Instagram, LinkedIn, or portfolio with one tap.
+          </p>
+        </CardContent>
+      </Card>
+
+    </div>
+  </div>
+</section>
+<section className="bg-[#e6f8fc] py-12 px-4">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    
+    {/* Left: Image */}
+    <div className="w-full md:w-1/2">
+      <div className="rounded-xl overflow-hidden shadow-md">
+        <Image
+          src="/nfc-about.png"  // Ensure this image exists in /public folder
+          alt="NFC Card Demo"
+          width={800}
+          height={600}
+          className="object-cover w-full h-auto"
+        />
+      </div>
+    </div>
+
+    {/* Right: Text Content */}
+    <div className="w-full md:w-1/2 bg-white p-6 md:p-10 rounded-2xl shadow-md">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        About NFC World
+      </h2>
+      <p className="text-gray-700 mb-6">
+        In 2018, two entrepreneurs discovered the power of <span className="text-blue-600">NFC technology</span>. A passion was immediately born.
+        We don’t keep this passion to ourselves; we like to share it with others. Our vision is therefore: to make the world familiar with NFC.
+        As entrepreneurs, we were looking for a high-quality product with fast delivery. We are now committed to that every day.
+        Currently, we are more enthusiastic than ever about NFC technology. We are sure you will be as excited about NFC as we are.
+      </p>
+      <Link href="/about">
+        <button className="px-5 py-2 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition">
+          About us
+        </button>
+      </Link>
+    </div>
+  </div>
+</section>
+<section className="py-12 px-4 bg-background">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-foreground">
+      Don't miss anything and read all about NFC
+    </h2>
+
+    {/* Blog Cards Grid */}
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Card 1 */}
+      <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+        <Image
+          src="/blog-1.jpg" // Save in /public
+          alt="Blog 1"
+          width={500}
+          height={300}
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-5 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 className="font-semibold text-lg text-foreground mb-2">
+              Corporate sustainability with the CSR performance ladder
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              Sustainability has long since ceased to be a luxury, but a requirement to remain relevant. Companies must prove...
+            </p>
+          </div>
+          <button className="mt-4 bg-teal-600 text-white px-4 py-2 rounded-b-xl rounded-t-md hover:bg-teal-700 transition">
+            Read article
+          </button>
+        </div>
+      </div>
+
+      {/* Card 2 */}
+      <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+        <Image
+          src="/blog-1.jpg"
+          alt="Blog 2"
+          width={500}
+          height={300}
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-5 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 className="font-semibold text-lg text-foreground mb-2">
+              Everything you need to know about ESG legislation as a company
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              ESG legislation is increasing. Governments are setting stricter rules to encourage sustainable business practices...
+            </p>
+          </div>
+          <button className="mt-4 bg-teal-600 text-white px-4 py-2 rounded-b-xl rounded-t-md hover:bg-teal-700 transition">
+            Read article
+          </button>
+        </div>
+      </div>
+
+      {/* Card 3 */}
+      <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+        <Image
+          src="/blog-1.jpg"
+          alt="Blog 3"
+          width={500}
+          height={300}
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-5 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 className="font-semibold text-lg text-foreground mb-2">
+              7 inspiring green companies doing sustainable business
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              Many organizations are choosing sustainability to reduce environmental impact. Here are 7 inspiring companies...
+            </p>
+          </div>
+          <button className="mt-4 bg-teal-600 text-white px-4 py-2 rounded-b-xl rounded-t-md hover:bg-teal-700 transition">
+            Read article
+          </button>
+        </div>
+      </div>
+    </div>
+
+    {/* CTA Button */}
+    <div className="flex justify-center mt-10">
+      <a href="/blogs">
+        <button className="bg-teal-600 text-white px-6 py-2 rounded-full hover:bg-teal-700 transition">
+          See all our blogs
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* Main Content */}
       <main className="flex-grow flex flex-col items-center justify-center p-6 space-y-8">
@@ -232,10 +424,10 @@ export default function Home() {
     <div>
       <h4 className="text-base font-semibold mb-2 text-primary">Quick Links</h4>
       <ul className="space-y-1">
-        <li><Link  href="/" className="hover:underline">Home</Link ></li>
-        <li><Link  href="/collections" className="hover:underline">Collections</Link ></li>
-        <li><Link  href="/about" className="hover:underline">About Us</Link ></li>
-        <li><Link  href="/contact" className="hover:underline">Contact</Link ></li>
+        <li><a  href="/" className="hover:underline">Home</a ></li>
+        <li><a  href="/collections" className="hover:underline">Collections</a ></li>
+        <li><a  href="/about" className="hover:underline">About Us</a ></li>
+        <li><a  href="/contact" className="hover:underline">Contact</a ></li>
       </ul>
     </div>
 
