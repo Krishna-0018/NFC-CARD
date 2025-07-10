@@ -10,6 +10,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Badge } from "@/components/ui/badge"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
+// import Header from "../components/Header"
 
 const products = [
   {
@@ -52,86 +53,7 @@ export default function CollectionsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       {/* --- Navbar --- */}
-      <nav className="bg-card shadow-md px-4 py-3 flex items-center justify-between w-full">
-        {/* Left: Logo */}
-        <h1 className="text-xl font-bold text-primary">NFC Card Maker</h1>
-
-        {/* Center Menu (Desktop) */}
-        <div className="hidden md:flex gap-6 items-center">
-          <Button variant="ghost" asChild><Link href="/">Home</Link></Button>
-
-          {/* Collections Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost">Collections</Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="w-56">
-              {products.map((p) => (
-                <DropdownMenuItem key={p.slug} asChild>
-                  <Link href={`/collections/${p.slug}`}>{p.name}</Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <Button variant="ghost">About Us</Button>
-          <Button variant="ghost">Contact</Button>
-        </div>
-
-        {/* Right: Theme Toggle & Auth */}
-        <div className="flex items-center gap-2">
-          {/* Theme Toggle */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          {/* Auth (Desktop) */}
-          <div className="hidden md:flex items-center gap-2">
-            <Button variant="outline">Login</Button>
-            <Button variant="default">Register</Button>
-            <Button variant="ghost" size="icon" title="Account">
-              <User className="w-5 h-5" />
-            </Button>
-          </div>
-
-          {/* Mobile Menu */}
-          <div className="md:hidden">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="w-6 h-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[250px]">
-                <div className="flex flex-col space-y-4 mt-6">
-                  <Button variant="ghost" asChild><Link href="/">Home</Link></Button>
-                  <p className="px-2 text-sm font-semibold">Collections</p>
-                  {products.map((p) => (
-                    <Button variant="ghost" className="justify-start pl-4" asChild key={p.slug}>
-                      <Link href={`/collections/${p.slug}`}>{p.name}</Link>
-                    </Button>
-                  ))}
-                  <Button variant="ghost">About Us</Button>
-                  <Button variant="ghost">Contact</Button>
-                  <Button variant="outline">Login</Button>
-                  <Button variant="default">Register</Button>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
-        </div>
-      </nav>
-
+            {/* <Header /> */}
       {/* --- Main Product Grid --- */}
       <main className="flex-grow p-6">
         <div className="max-w-7xl mx-auto">

@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Node and Next.js folders to ignore
+node_modules/
+.next/
+npx/
+dist/
+out/
+
