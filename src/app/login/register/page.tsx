@@ -27,7 +27,7 @@ export default function RegisterPage() {
 
     // Simulate backend call
     console.log("Registering customer:", form);
-    router.push("/admin/login");
+    router.push("/login");
   };
 
   return (

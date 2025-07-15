@@ -28,7 +28,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200 px-4">
       <div className="bg-white max-w-md w-full rounded-xl shadow-xl p-8 space-y-6">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-blue-700">Admin Login</h2>
+          <h2 className="text-3xl font-bold text-blue-700">Login Here</h2>
           <p className="text-sm text-muted-foreground mt-2">Sign in to manage your NFC store</p>
         </div>
 
@@ -36,7 +36,7 @@ export default function LoginPage() {
           <div>
             <label className="block mb-1 font-medium">Username</label>
             <Input
-              placeholder="Enter username"
+              placeholder="Enter email-id"
               value={credentials.username}
               onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
               required
