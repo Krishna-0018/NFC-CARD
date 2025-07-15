@@ -2,15 +2,10 @@
 
 import Image from "next/image"
 import Link from "next/link"
-// import { useTheme } from "next-themes"
-// import { Sun, Moon, Menu, User } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-// import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Badge } from "@/components/ui/badge"
-// import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
-// import Header from "../components/Header"
+
 
 const products = [
   {
