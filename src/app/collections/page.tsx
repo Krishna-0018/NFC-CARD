@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useTheme } from "next-themes"
+// import { useTheme } from "next-themes"
 // import { Sun, Moon, Menu, User } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
