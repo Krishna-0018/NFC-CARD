@@ -1,14 +1,19 @@
 'use client'
-// import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { useTheme } from "next-themes"
-// import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem
+} from "@/components/ui/dropdown-menu"
 import { Menu, Sun, Moon, User } from "lucide-react"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 
 export default function Header() {
   const { setTheme } = useTheme()
+  const router = useRouter()
 
   return (
     <nav className="bg-card shadow-md px-4 py-3 flex items-center justify-between w-full">
@@ -25,7 +30,6 @@ export default function Header() {
             <DropdownMenuItem>NFC Stickers</DropdownMenuItem>
             <DropdownMenuItem>NFC Cards</DropdownMenuItem>
             <DropdownMenuItem>NFC Reader</DropdownMenuItem>
-            {/* Add more if needed */}
           </DropdownMenuContent>
         </DropdownMenu>
         <Button variant="ghost">About Us</Button>
@@ -48,8 +52,8 @@ export default function Header() {
         </DropdownMenu>
 
         <div className="hidden md:flex gap-2">
-          <Button variant="outline">Login</Button>
-          <Button variant="default">Register</Button>
+          <Button variant="outline" onClick={() => router.push("/login")}>Login</Button>
+          <Button variant="default" onClick={() => router.push("/login/register")}>Register</Button>
           <Button variant="ghost" size="icon">
             <User className="w-5 h-5" />
           </Button>
@@ -68,8 +72,8 @@ export default function Header() {
                 <Button variant="ghost">Products</Button>
                 <Button variant="ghost">About Us</Button>
                 <Button variant="ghost">Contact</Button>
-                <Button variant="outline">Login</Button>
-                <Button variant="default">Register</Button>
+                <Button variant="outline" onClick={() => router.push("/login")}>Login</Button>
+                <Button variant="default" onClick={() => router.push("/register")}>Register</Button>
               </div>
             </SheetContent>
           </Sheet>
