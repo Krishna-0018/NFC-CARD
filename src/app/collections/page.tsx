@@ -48,7 +48,7 @@ const products = [
 ]
 
 export default function CollectionsPage() {
-  const { setTheme } = useTheme()
+  // const { setTheme } = useTheme()
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
