@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Menu, Sun, Moon, User } from "lucide-react"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
+import Link from "next/link"
 
 export default function Header() {
   const { setTheme } = useTheme()
@@ -20,18 +21,28 @@ export default function Header() {
       <h1 className="text-xl font-bold text-primary">NFC Card Maker</h1>
 
       <div className="hidden md:flex gap-6 items-center">
-        <Button variant="ghost">Home</Button>
+        <Link href="/">
+        <Button variant="ghost">Home</Button></Link>
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost">Products</Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="start" className="max-w-xs grid grid-cols-2 gap-2 p-2">
-            <DropdownMenuItem>NFC Tags</DropdownMenuItem>
-            <DropdownMenuItem>NFC Stickers</DropdownMenuItem>
-            <DropdownMenuItem>NFC Cards</DropdownMenuItem>
-            <DropdownMenuItem>NFC Reader</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+  <DropdownMenuTrigger asChild>
+    <Button variant="ghost">Products</Button>
+  </DropdownMenuTrigger>
+  <DropdownMenuContent align="start" className="max-w-xs grid grid-cols-2 gap-2 p-2">
+    <DropdownMenuItem asChild>
+      <Link href="/product?type=nfc-tags">NFC Tags</Link>
+    </DropdownMenuItem>
+    <DropdownMenuItem asChild>
+      <Link href="/product?type=nfc-cards">NFC Cards</Link>
+    </DropdownMenuItem>
+    <DropdownMenuItem asChild>
+      <Link href="/product?type=nfc-stickers">NFC Stickers</Link>
+    </DropdownMenuItem>
+    <DropdownMenuItem asChild>
+      <Link href="/product?type=nfc-reader">NFC Reader</Link>
+    </DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+
         <Button variant="ghost">About Us</Button>
         <Button variant="ghost">Contact</Button>
       </div>
