@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 // import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
-import { Providers } from "./providers";
+// import { Providers } from "./providers";
 import { ThemeProvider } from "next-themes";
 // import { Toaster } from "@/components/ui/toaster";
 

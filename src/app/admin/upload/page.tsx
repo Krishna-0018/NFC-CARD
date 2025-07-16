@@ -16,7 +16,7 @@ export default function UploadPage() {
   };
 
   return (
-    <div>
+    <div className="">
       <h1 className="text-3xl font-bold mb-6">⬆️ Upload New Product</h1>
       <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded shadow-md max-w-lg">
         <div>
